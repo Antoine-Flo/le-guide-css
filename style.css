@@ -1,0 +1,166 @@
+/*****************************************************************************************/
+/*************************************** SELECTEUR ***************************************/
+
+/***** Sélecteur de type *****/
+h1 {
+    color: coral;
+    text-align: center;
+}
+
+/***** Un type enfant *****/
+header h1 {
+    color: crimson;
+}
+
+/***** Sélecteur de class *****/
+.titre {
+    color: darkolivegreen;
+}
+
+/***** Element avec classe *****/
+h1.titre {
+    color: darkviolet;
+}
+
+/***** Sélecteur de descendant direct *****/
+div>.titre {
+    color: mediumseagreen;
+}
+
+/***** Sélecteur d'id *****/
+#welcome1 {
+    color: deepskyblue;
+}
+
+/*****************************************************************************************/
+/*************************************** PROPRIETE ***************************************/
+
+
+/* Unités de mesure: px | % | vw, vh | em | rem | vw, vh | fr  */
+
+.container {
+    width: min-content;
+    margin-left: 50vw;
+    margin-bottom: 5rem;
+    border: 2px solid black;
+    transform: translateX(-50%);
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: mediumseagreen;
+    border-radius: 100%;
+    margin: 20px;
+    padding: 20px;
+}
+
+.text {
+    color: white;
+    font-family: Arial;
+}
+
+/*****************************************************************************************/
+/*************************************** FLEX ***************************************/
+
+.flex-box {
+    margin-bottom: 5em;
+    display: flex;
+    height: 10rem;
+    border: 10px solid dodgerblue;
+    outline: 10px solid black;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items:center;
+}
+
+.flex-item {
+    margin: 2em;
+    width: 60px;
+    height: 60px;
+    background-color: crimson;
+}
+
+.flex-item-2 {
+    align-self: flex-start;
+}
+
+/*****************************************************************************************/
+/***************************************** GRID *****************************************/
+
+.grid {
+    margin-bottom: 5em;
+    display: grid;
+    background-color: grey;
+    width: 100%;
+    height: 40rem;
+    gap: 5px;
+
+    /* grid-template-columns: 50px 1fr 2fr; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+
+    justify-items: center;
+    align-content: space-around
+}
+
+[class^="el-"] {
+    width: 40px;
+    height: 40px;
+    background-color: teal;
+}
+
+/*****************************************************************************************/
+/******************************** PSEUDO CLASS / ELEMENT ********************************/
+
+.pseudo {
+    margin-bottom: 5em;
+    width: 1000px;
+    height: 200px;
+    background-color: mediumseagreen;
+    transition: all .2s;
+}
+
+.pseudo::before {
+    content: "";
+
+    /* content: "\201C";
+    color: grey; */
+
+    font-size: 10rem;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color:mediumvioletred;
+}
+
+.pseudo:hover {
+    background-color: lightseagreen;
+}
+
+.link:active {
+    font-style: italic;
+}
+
+.link:focus {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.link:visited {
+    color: black;
+}
+
+li:first-child {
+    background-color:cadetblue
+}
+
+li:nth-of-type(2) {
+    background-color:darkgoldenrod
+}
+
+/*****************************************************************************************/
+/*************************************** ANIMATIONS **************************************/
+
+
+/*****************************************************************************************/
+/************************************* MEDIA QUERIES *************************************/
